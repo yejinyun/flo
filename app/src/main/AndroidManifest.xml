@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.flo">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_flo"
+        android:label="flo"
+        android:roundIcon="@mipmap/ic_launcher_flo_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.BottomNaviTemplate">
+
+        <activity android:name="com.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.MainActivity"/>
+
+        <activity android:name="com.SongActivity"/>
+        <activity android:name="com.LoginActivity"/>
+        <activity android:name="com.SignUpActivity"/>
+    </application>
+</manifest>

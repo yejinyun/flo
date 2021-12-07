@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/album_collapsing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        app:elevation="0dp">
+        <!--elevation 앱바 그림자 제거-->
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fitsSystemWindows="true"
+            android:background="@null"
+            app:titleEnabled="false"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/album_upper_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/album_top_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <ImageView
+                        android:id="@+id/album_back_iv"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/btn_arrow_black"
+                        app:layout_constraintBottom_toBottomOf="@+id/album_like_iv"
+                        app:layout_constraintEnd_toStartOf="@+id/album_more_iv"
+                        app:layout_constraintTop_toTopOf="@+id/album_more_iv"
+                        android:layout_gravity="right" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+
+                    <ImageView
+                        android:id="@+id/album_like_iv"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_my_like_off"
+                        app:layout_constraintBottom_toBottomOf="@+id/album_like_iv"
+                        app:layout_constraintEnd_toStartOf="@+id/album_more_iv"
+                        app:layout_constraintTop_toTopOf="@+id/album_more_iv"
+                        android:layout_gravity="right" />
+
+                    <ImageView
+                        android:id="@+id/album_more_iv"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/btn_player_more"
+                        app:layout_constraintStart_toEndOf="@id/album_like_iv"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/song_info_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/album_top_layout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_collapseMode="parallax">
+
+                    <TextView
+                        android:id="@+id/album_music_title_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="앨범 이름"
+                        android:textSize="20dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:id="@+id/album_music_singer_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="가수 이름"
+                        android:textSize="15dp"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:id="@+id/album_music_info_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2020.11.06｜미니｜인디 락"
+                        android:layout_marginTop="5dp"
+                        android:textSize="15dp"
+                        android:layout_gravity="center" />
+
+
+                    <androidx.cardview.widget.CardView
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/card_view"
+                        android:layout_gravity="center"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        card_view:cardElevation="0dp"
+                        card_view:cardCornerRadius="10dp"
+                        android:layout_marginTop="15dp">
+                        <ImageView
+                            android:id="@+id/album_album_iv"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:src="@drawable/album_jannabi"
+                            />
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/album_content_tb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorFullWidth="false"
+            app:tabRippleColor="#00ff0000"
+            app:tabIndicatorColor="@color/purple_700"
+            app:tabTextColor="@color/black"
+            app:tabSelectedTextColor="@color/purple_700"
+            app:layout_collapseMode="pin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/album_collapsing"
+            app:tabMode="scrollable"
+            app:tabGravity="fill"/>
+        <ImageView
+            android:id="@+id/album_diver_iv"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:src="@color/grey_01"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/album_content_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        tools:context=".MainActivity"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <ProgressBar
+            android:layout_height="73dp"
+            android:layout_width="match_parent" style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/progressBar"/>
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/btn_execute"
+            android:text="실행"/>
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/btn_stop"
+            android:text="중지"/>
+
+    </LinearLayout>
+</selector>

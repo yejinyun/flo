@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/home_background_iv"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:src="@drawable/img_default_4_x_1"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/home_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FLO 차트"
+        android:textColor="#ffffff"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/home_subtitle_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="내 취향 MIX"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@+id/home_title_tv"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/home_24h_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="24시간 집계 (01시 기준)"
+        android:textColor="#ffffff"
+        android:textSize="13sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_title_tv"
+        />
+
+    <ImageView
+        android:id="@+id/home_24h_rank_01_album_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/img_album_exp2"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_24h_tv"
+        />
+
+    <TextView
+        android:id="@+id/home_24h_rank_01_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/home_24h_rank_01_album_iv"
+        app:layout_constraintTop_toBottomOf="@id/home_24h_tv"
+        />
+
+    <TextView
+        android:id="@+id/home_24h_rank_01_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="라일락"
+        android:textColor="#ffffff"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@id/home_24h_rank_01_tv"
+        app:layout_constraintTop_toBottomOf="@id/home_24h_tv"
+        />
+
+    <TextView
+        android:id="@+id/home_24h_rank_01_singer_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아이유 (IU)"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@id/home_24h_rank_01_tv"
+        app:layout_constraintTop_toBottomOf="@id/home_24h_rank_01_title_tv"
+        />
+
+
+    <ImageView
+        android:id="@+id/home_24h_rank_02_album_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/img_album_exp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_24h_rank_01_album_iv"
+        />
+
+    <TextView
+        android:id="@+id/home_24h_rank_02_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/home_24h_rank_02_album_iv"
+        app:layout_constraintTop_toBottomOf="@id/home_24h_rank_01_singer_tv"
+        />
+
+    <TextView
+        android:id="@+id/home_24h_rank_02_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Butter"
+        android:textColor="#ffffff"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@id/home_24h_rank_02_tv"
+        app:layout_constraintTop_toBottomOf="@id/home_24h_rank_01_singer_tv"
+        />
+
+    <TextView
+        android:id="@+id/home_24h_rank_02_singer_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="방탄소년단 (BTS)"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/home_24h_rank_02_tv"
+        app:layout_constraintTop_toBottomOf="@id/home_24h_rank_02_title_tv"
+        />
+
+    //3
+    <ImageView
+        android:id="@+id/home_24h_rank_03_album_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/img_album_exp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_24h_rank_02_album_iv"
+        />
+
+    <TextView
+        android:id="@+id/home_24h_rank_03_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/home_24h_rank_03_album_iv"
+        app:layout_constraintTop_toBottomOf="@id/home_24h_rank_02_singer_tv"
+        />
+
+    <TextView
+        android:id="@+id/home_24h_rank_03_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Butter"
+        android:textColor="#ffffff"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@id/home_24h_rank_03_tv"
+        app:layout_constraintTop_toBottomOf="@id/home_24h_rank_02_singer_tv"
+        />
+
+    <TextView
+        android:id="@+id/home_24h_rank_03_singer_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="방탄소년단 (BTS)"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/home_24h_rank_02_tv"
+        app:layout_constraintTop_toBottomOf="@id/home_24h_rank_03_title_tv"
+        />
+
+    //4
+    <ImageView
+        android:id="@+id/home_24h_rank_04_album_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/img_album_exp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_24h_rank_03_album_iv"
+        />
+
+    <TextView
+        android:id="@+id/home_24h_rank_04_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/home_24h_rank_04_album_iv"
+        app:layout_constraintTop_toBottomOf="@id/home_24h_rank_03_singer_tv"
+        />
+
+    <TextView
+        android:id="@+id/home_24h_rank_04_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Butter"
+        android:textColor="#ffffff"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@id/home_24h_rank_04_tv"
+        app:layout_constraintTop_toBottomOf="@id/home_24h_rank_03_singer_tv"
+        />
+
+    <TextView
+        android:id="@+id/home_24h_rank_04_singer_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="방탄소년단 (BTS)"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/home_24h_rank_03_tv"
+        app:layout_constraintTop_toBottomOf="@id/home_24h_rank_04_title_tv"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
